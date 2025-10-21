@@ -66,8 +66,7 @@ body {
   background: #f5f5f5;
   border-radius: 25px;
   padding: 2px;
-  max-width: 300px;
-  margin-right: 20px;
+  max-width: 250px;
 }
 
 .search-input {
@@ -123,9 +122,27 @@ body {
   background: #f5f5f5;
 }
 
+.cart-btn {
+  background: #4caf50 !important;
+  color: white !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cart-btn:hover {
+  background: #45a049 !important;
+  transform: scale(1.05);
+}
+
 .avatar {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   position: relative;
   cursor: pointer;
@@ -151,7 +168,7 @@ body {
 
 .cart-badge {
   position: absolute;
-  bottom: -4px;
+  top: -4px;
   right: -4px;
   background: #4caf50;
   color: white;
@@ -168,35 +185,44 @@ body {
 /* NOTIFICATION CONTAINER */
 .notification-container {
   position: relative;
+  width: 40px;
+  height: 40px;
 }
 
 .notification-bell {
   position: absolute;
-  top: -3px;
-  right: -3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #ffc107;
   border-radius: 50%;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 0.65rem;
+  z-index: 2;
 }
 
 /* USER AVATAR */
 .user-avatar {
-  color: #888;
+  color: #666;
   cursor: pointer;
-  padding: 4px;
-  border-radius: 4px;
-  transition: color 0.3s ease, background 0.3s ease;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, background 0.3s ease, transform 0.2s ease;
 }
 
 .user-avatar:hover {
   color: #333;
   background: #f0f0f0;
+  transform: scale(1.05);
 }
 
 /* MAIN CONTENT */
@@ -214,7 +240,7 @@ body {
 .blog-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2f7d32;
+  color: black;
   margin-bottom: 15px;
 }
 
@@ -224,6 +250,13 @@ body {
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.7;
+}
+
+.blog-date {
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 /* BLOG FILTERS */
@@ -400,9 +433,9 @@ body {
 }
 
 .footer-pagination {
-  background: #f8f9fa;
-  padding: 20px 0;
-  border-top: 1px solid #e9ecef;
+  background: #e8f5e9;
+  padding: 30px 0 20px 0;
+  border-bottom: 1px solid #c8e6c9;
 }
 
 .pagination-btn {
@@ -464,6 +497,17 @@ body {
   background: #2f7d32;
   color: white;
   border-color: #2f7d32;
+}
+
+.pagination-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 4px;
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 600;
+  user-select: none;
 }
 
 /* FOOTER */
@@ -539,11 +583,11 @@ body {
   }
 
   .search-container {
-    max-width: 250px;
+    max-width: 200px;
   }
 
   .search-input {
-    min-width: 150px;
+    min-width: 120px;
   }
 }
 
@@ -633,8 +677,23 @@ body {
   }
 
   .avatar {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .cart-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .notification-container {
+    width: 35px;
+    height: 35px;
+  }
+
+  .user-avatar {
+    width: 35px;
+    height: 35px;
   }
 
   .cart-badge {
@@ -647,6 +706,9 @@ body {
     width: 16px;
     height: 16px;
     font-size: 0.6rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -675,5 +737,25 @@ body {
 
   .card-title {
     font-size: 1.1rem;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cart-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .notification-container {
+    width: 32px;
+    height: 32px;
+  }
+
+  .user-avatar {
+    width: 32px;
+    height: 32px;
   }
 }

@@ -93,35 +93,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.querySelector(".pagination-btn.next");
 
   let currentPage = 1;
-  const totalPages = 100;
+  const totalPages = 30;
 
   // Update pagination buttons
   function updatePagination() {
-    // Clear all pagination numbers first
-    paginationNumbers.forEach((btn) => {
-      btn.style.display = "none";
-      btn.classList.remove("active");
-    });
-
-    // Calculate which group of 30 pages to show (0-based groups)
-    const groupSize = 30;
+    // Calculate which group of 5 pages to show
+    const groupSize = 5;
     const currentGroup = Math.floor((currentPage - 1) / groupSize);
     const startPage = currentGroup * groupSize + 1;
-    const endPage = Math.min(totalPages, startPage + 29); // Show up to 30 pages
+    const endPage = Math.min(totalPages, startPage + 4);
 
-    // Show pages in current group (up to 30 pages)
-    for (let i = 0; i < 30; i++) {
-      const pageNum = startPage + i;
-      if (pageNum > totalPages) break;
-
-      if (paginationNumbers[i]) {
-        paginationNumbers[i].style.display = "flex";
-        paginationNumbers[i].textContent = pageNum.toString();
+    // Set pagination numbers for current group
+    paginationNumbers.forEach((btn, index) => {
+      const pageNum = startPage + index;
+      if (pageNum <= totalPages) {
+        btn.textContent = pageNum.toString();
+        btn.style.display = "flex";
+        btn.classList.remove("active");
+      } else {
+        btn.style.display = "none";
       }
-    }
+    });
 
-    // Set active page (relative position within the group)
-    const activeIndex = (currentPage - 1) % groupSize;
+    // Set active page
+    const activeIndex = currentPage - startPage;
     if (
       paginationNumbers[activeIndex] &&
       paginationNumbers[activeIndex].style.display !== "none"
@@ -137,20 +132,21 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle pagination number clicks
   paginationNumbers.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      const pageText = btn.textContent.trim();
-      if (pageText === "...") return; // Don't handle ellipsis clicks
-
       // Calculate the actual page number based on current group and button index
-      const groupSize = 30;
+      const groupSize = 5;
       const currentGroup = Math.floor((currentPage - 1) / groupSize);
       const startPage = currentGroup * groupSize + 1;
-      currentPage = startPage + index;
+      const pageNum = startPage + index;
 
-      updatePagination();
-      console.log(`Page ${currentPage} selected`);
+      if (pageNum <= totalPages) {
+        currentPage = pageNum;
 
-      // Simulate page loading
-      simulatePageLoad(currentPage);
+        updatePagination();
+        console.log(`Page ${currentPage} selected`);
+
+        // Simulate page loading
+        simulatePageLoad(currentPage);
+      }
     });
   });
 
@@ -250,7 +246,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ];
 
       const titles = [];
-      for (let page = 1; page <= 100; page++) {
+      for (let page = 1; page <= 30; page++) {
         for (let cardIndex = 0; cardIndex < 3; cardIndex++) {
           titles.push(
             `${

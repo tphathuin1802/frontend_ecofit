@@ -33,27 +33,43 @@
           <a href="#" class="active">Blog</a>
           <a href="#">FAQ</a>
         </nav>
-        <div class="search-container">
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Search product..."
-          />
-          <button class="search-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.35-4.35"></path>
-            </svg>
-          </button>
-        </div>
         <div class="actions">
+          <div class="search-container">
+            <button class="search-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search product..."
+            />
+          </div>
+          <div class="notification-container">
+            <div class="avatar yellow"></div>
+            <div class="notification-bell">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"
+                />
+              </svg>
+            </div>
+          </div>
           <div class="cart-container">
             <button class="icon cart-btn">
               <svg
@@ -73,27 +89,11 @@
             </button>
             <div class="cart-badge">3</div>
           </div>
-          <div class="notification-container">
-            <div class="avatar yellow"></div>
-            <div class="notification-bell">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                fill="currentColor"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"
-                />
-              </svg>
-            </div>
-          </div>
           <div class="user-avatar">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width="24"
+              height="24"
               fill="currentColor"
               viewBox="0 0 16 16"
             >
@@ -113,15 +113,11 @@
       <div class="container">
         <!-- BLOG HEADER -->
         <section class="blog-header">
-          <h1 class="blog-title">Blog</h1>
-          <p class="blog-subtitle">
-            EcoFit's blog shares advice, tips, and sustainability insights to
-            help you shop smarter, live greener, and build a more sustainable
-            future together.
-          </p>
+          <h1 class="blog-title">
+            The Green Routine: Everyday Habits for a Cleaner Planet
+          </h1>
+          <div class="blog-date">1 Jan 2025</div>
         </section>
-
-
 
         <!-- BLOG CONTENT SECTIONS -->
         <section class="blog-content">
@@ -136,7 +132,6 @@
             ante, accumsan cursus. Fermentum in bibendum aliquet vel vitae vero
             ut nibh. Leo feugiat enim enim vulputate cursus eu nisi pharetra.
           </p>
-          </p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat
             pretium, nisi sed id id sed orci, tempor. Pellentesque egestas odio
@@ -146,7 +141,6 @@
             pretium, nisi sed id id sed orci, tempor. Pellentesque egestas odio
             ante, accumsan cursus. Fermentum in bibendum aliquet vel vitae vero
             ut nibh. Leo feugiat enim enim vulputate cursus eu nisi pharetra.
-          </p>
           </p>
 
           <h2>Headline 1</h2>
@@ -170,7 +164,6 @@
             ante, accumsan cursus. Fermentum in bibendum aliquet vel vitae vero
             ut nibh. Leo feugiat enim enim vulputate cursus eu nisi pharetra.
           </p>
-          </p>
 
           <h2>Headline 1</h2>
           <p>
@@ -192,27 +185,26 @@
             pretium, nisi sed id id sed orci, tempor. Pellentesque egestas odio
             ante, accumsan cursus. Fermentum in bibendum aliquet vel vitae vero
             ut nibh. Leo feugiat enim enim vulputate cursus eu nisi pharetra.
-          </p>
           </p>
         </section>
-    
-                <!-- FILTERS -->
-                <section class="blog-filters">
-                    <div class="filter-buttons">
-                      <button class="filter-btn active">All Tags</button>
-                      <button class="filter-btn">Green Cleaning</button>
-                      <button class="filter-btn">Community</button>
-                      <button class="filter-btn">Sustainable Fashion</button>
-                    </div>
-                    <div class="sort-dropdown">
-                      <label>Sort by:</label>
-                      <select class="sort-select">
-                        <option>Latest</option>
-                        <option>Popular</option>
-                        <option>Oldest</option>
-                      </select>
-                    </div>
-                  </section>
+
+        <!-- FILTERS -->
+        <section class="blog-filters">
+          <div class="filter-buttons">
+            <button class="filter-btn active">All Tags</button>
+            <button class="filter-btn">Green Cleaning</button>
+            <button class="filter-btn">Community</button>
+            <button class="filter-btn">Sustainable Fashion</button>
+          </div>
+          <div class="sort-dropdown">
+            <label>Sort by:</label>
+            <select class="sort-select">
+              <option>Latest</option>
+              <option>Popular</option>
+              <option>Oldest</option>
+            </select>
+          </div>
+        </section>
 
         <!-- BLOG GRID -->
         <section class="blog-grid">
@@ -324,12 +316,51 @@
             </div>
           </div>
         </section>
-
       </div>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
+      <!-- PAGINATION -->
+      <div class="footer-pagination">
+        <div class="pagination">
+          <button class="pagination-btn prev" disabled>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+          </button>
+
+          <div class="pagination-numbers">
+            <button class="pagination-number active">1</button>
+            <button class="pagination-number">2</button>
+            <button class="pagination-number">3</button>
+            <button class="pagination-number">4</button>
+            <button class="pagination-number">5</button>
+          </div>
+
+          <button class="pagination-btn next">
+            <span>Next</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
       <div class="container footer-grid">
         <div class="col">
           <div class="logo">
@@ -382,6 +413,7 @@
             </svg>
           </div>
         </div>
+
         <div class="col">
           <h3>About EcoFit</h3>
           <ul>
@@ -394,141 +426,6 @@
           <h3>Contact Us</h3>
           <p>Hotline: 1900-6752</p>
           <p>Email: customerservice@ecofit.com</p>
-        </div>
-      </div>
-
-      <!-- PAGINATION IN FOOTER -->
-      <div class="footer-pagination">
-        <div class="pagination">
-          <button class="pagination-btn prev" disabled>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <polyline points="15,18 9,12 15,6"></polyline>
-            </svg>
-          </button>
-
-          <div class="pagination-numbers">
-            <button class="pagination-number active">1</button>
-            <button class="pagination-number">2</button>
-            <button class="pagination-number">3</button>
-            <button class="pagination-number">4</button>
-            <button class="pagination-number">5</button>
-            <button class="pagination-number">6</button>
-            <button class="pagination-number">7</button>
-            <button class="pagination-number">8</button>
-            <button class="pagination-number">9</button>
-            <button class="pagination-number">10</button>
-            <button class="pagination-number">11</button>
-            <button class="pagination-number">12</button>
-            <button class="pagination-number">13</button>
-            <button class="pagination-number">14</button>
-            <button class="pagination-number">15</button>
-            <button class="pagination-number">16</button>
-            <button class="pagination-number">17</button>
-            <button class="pagination-number">18</button>
-            <button class="pagination-number">19</button>
-            <button class="pagination-number">20</button>
-            <button class="pagination-number">21</button>
-            <button class="pagination-number">22</button>
-            <button class="pagination-number">23</button>
-            <button class="pagination-number">24</button>
-            <button class="pagination-number">25</button>
-            <button class="pagination-number">26</button>
-            <button class="pagination-number">27</button>
-            <button class="pagination-number">28</button>
-            <button class="pagination-number">29</button>
-            <button class="pagination-number">30</button>
-            <button class="pagination-number">31</button>
-            <button class="pagination-number">32</button>
-            <button class="pagination-number">33</button>
-            <button class="pagination-number">34</button>
-            <button class="pagination-number">35</button>
-            <button class="pagination-number">36</button>
-            <button class="pagination-number">37</button>
-            <button class="pagination-number">38</button>
-            <button class="pagination-number">39</button>
-            <button class="pagination-number">40</button>
-            <button class="pagination-number">41</button>
-            <button class="pagination-number">42</button>
-            <button class="pagination-number">43</button>
-            <button class="pagination-number">44</button>
-            <button class="pagination-number">45</button>
-            <button class="pagination-number">46</button>
-            <button class="pagination-number">47</button>
-            <button class="pagination-number">48</button>
-            <button class="pagination-number">49</button>
-            <button class="pagination-number">50</button>
-            <button class="pagination-number">51</button>
-            <button class="pagination-number">52</button>
-            <button class="pagination-number">53</button>
-            <button class="pagination-number">54</button>
-            <button class="pagination-number">55</button>
-            <button class="pagination-number">56</button>
-            <button class="pagination-number">57</button>
-            <button class="pagination-number">58</button>
-            <button class="pagination-number">59</button>
-            <button class="pagination-number">60</button>
-            <button class="pagination-number">61</button>
-            <button class="pagination-number">62</button>
-            <button class="pagination-number">63</button>
-            <button class="pagination-number">64</button>
-            <button class="pagination-number">65</button>
-            <button class="pagination-number">66</button>
-            <button class="pagination-number">67</button>
-            <button class="pagination-number">68</button>
-            <button class="pagination-number">69</button>
-            <button class="pagination-number">70</button>
-            <button class="pagination-number">71</button>
-            <button class="pagination-number">72</button>
-            <button class="pagination-number">73</button>
-            <button class="pagination-number">74</button>
-            <button class="pagination-number">75</button>
-            <button class="pagination-number">76</button>
-            <button class="pagination-number">77</button>
-            <button class="pagination-number">78</button>
-            <button class="pagination-number">79</button>
-            <button class="pagination-number">80</button>
-            <button class="pagination-number">81</button>
-            <button class="pagination-number">82</button>
-            <button class="pagination-number">83</button>
-            <button class="pagination-number">84</button>
-            <button class="pagination-number">85</button>
-            <button class="pagination-number">86</button>
-            <button class="pagination-number">87</button>
-            <button class="pagination-number">88</button>
-            <button class="pagination-number">89</button>
-            <button class="pagination-number">90</button>
-            <button class="pagination-number">91</button>
-            <button class="pagination-number">92</button>
-            <button class="pagination-number">93</button>
-            <button class="pagination-number">94</button>
-            <button class="pagination-number">95</button>
-            <button class="pagination-number">96</button>
-            <button class="pagination-number">97</button>
-            <button class="pagination-number">98</button>
-            <button class="pagination-number">99</button>
-          </div>
-
-          <button class="pagination-btn next">
-            <span>Next</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="9,18 15,12 9,6"></polyline>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <div class="bottom">
-        <p>Copyright © EcoFit Team - All rights reserved</p>
-        <div class="links">
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy Policy</a>
         </div>
       </div>
     </footer>
